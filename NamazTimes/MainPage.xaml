@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="NamazTimes.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">
+
+            <Image
+                Source="picture.png"
+                HeightRequest="100"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="NamazTimesLabel"
+                Text="Время намазов:"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="32"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="FajrLabel"
+                Text="Фаджр: 00:00"
+                HorizontalOptions="Center" />
+            <Label
+                x:Name="ZyhrLabel"
+                Text="Зухр: 00:00"
+                HorizontalOptions="Center"/>
+            <Label
+                x:Name="AsrLabel"
+                Text="Аср: 00:00"
+                HorizontalOptions="Center"/>
+            <Label
+                x:Name="MagribLabel"
+                Text="Магриб (Ифтар): 00:00"
+                HorizontalOptions="Center"/>
+            <Label
+                x:Name="IshaLabel"
+                Text="Иша: 00:00"
+                HorizontalOptions="Center"/>
+
+            <Entry
+                x:Name="CityEntry"
+                Placeholder="Введите город"
+                PlaceholderColor="Green"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                FontSize="18"/>
+
+            <Button
+                x:Name="OkButton"
+                Text="Ok"
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Center"
+                WidthRequest="200"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
